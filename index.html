@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Amal | Despacho Contable, Fiscal y Nóminas</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Servicios profesionales de Contabilidad, Nómina, Fiscal y consultoría para Personas Morales y Físicas. Registro REPSE y cursos de Excel corporativos.">
+    <meta name="keywords" content="contabilidad, despacho contable, fiscal, nómina, RESICO, personas morales, personas físicas, REPSE, SIROC, cursos excel, Los Mochis, Sinaloa, Grupo Amal">
+    <meta name="author" content="Grupo Amal">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website">
+    <meta property="og:title"       content="Grupo Amal | Despacho Contable, Fiscal y Nóminas">
+    <meta property="og:description" content="Soluciones integrales en Contabilidad, Nómina y Fiscal para Personas Morales y Físicas en Los Mochis, Sinaloa.">
+    <meta property="og:image"       content="img/hero.jpg">
+    <meta property="og:locale"      content="es_MX">
+    <meta name="twitter:card"       content="summary_large_image">
+    <meta name="twitter:title"      content="Grupo Amal | Despacho Contable, Fiscal y Nóminas">
+    <meta name="twitter:description" content="Soluciones integrales en Contabilidad, Nómina y Fiscal para Personas Morales y Físicas en Los Mochis, Sinaloa.">
+    <meta name="twitter:image"      content="img/hero.jpg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Configuración Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amal: {
+                            black:    '#0a0a0a',
+                            dark:     '#171717',
+                            light:    '#f9fafb',
+                            white:    '#ffffff',
+                            cyan:     '#14b8a6',
+                            cyanDark: '#0f766e',
+                            muted:    '#6b7280',
+                            mutedDark:'#9ca3af'
+                        }
+                    },
+                    fontFamily: {
+                        sans:    ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased selection:bg-amal-cyan selection:text-white">
+
+    <!-- Navbar Minimalista -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-5 px-6 lg:px-12 border-b border-transparent text-white bg-transparent">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo Tipográfico -->
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="font-bold text-xl tracking-tight">
+                    GRUPO <span class="text-amal-cyan">AMAL</span>
+                </span>
+            </a>
+
+            <!-- Enlaces Desktop -->
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#servicios"   class="hover:text-amal-cyan transition-colors">Servicios</a>
+                <a href="#experiencia" class="hover:text-amal-cyan transition-colors">Experiencia</a>
+                <a href="#contacto"    class="hover:text-amal-cyan transition-colors">Contacto</a>
+                <a href="#contacto" class="px-6 py-2.5 border border-white hover:border-amal-cyan bg-white text-black hover:bg-amal-cyan hover:text-white transition-all text-sm font-semibold">
+                    Contactar
+                </a>
+            </div>
+
+            <!-- Botón Móvil -->
+            <button class="md:hidden p-2 focus:outline-none" id="mobile-menu-btn" aria-label="Menú">
+                <i class="ph ph-list text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white border-b border-gray-200 hidden flex-col items-center py-6 gap-4 text-black shadow-lg">
+            <a href="#servicios"   class="text-base font-medium hover:text-amal-cyanDark w-full text-center py-2 menu-link">Servicios</a>
+            <a href="#experiencia" class="text-base font-medium hover:text-amal-cyanDark w-full text-center py-2 menu-link">Experiencia</a>
+            <a href="#contacto"    class="text-base font-medium hover:text-amal-cyanDark w-full text-center py-2 menu-link">Contacto</a>
+            <a href="#contacto" class="px-6 py-3 bg-black text-white text-sm font-semibold mt-2 menu-link w-3/4 text-center">Contactar</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[90vh] flex items-center pt-20 bg-amal-black text-white">
+        <!-- Patrón geométrico sutil -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Texto Hero -->
+            <div class="space-y-8">
+                <div class="reveal">
+                    <span class="text-amal-cyan text-sm font-bold tracking-widest uppercase border-l-2 border-amal-cyan pl-3">
+                        Servicios Profesionales
+                    </span>
+                </div>
+
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight reveal delay-100">
+                    Certeza fiscal <br>
+                    para decisiones <br>
+                    <span class="text-gray-400">empresariales.</span>
+                </h1>
+
+                <p class="text-lg text-gray-400 max-w-lg font-light leading-relaxed reveal delay-200">
+                    Soluciones integrales en Contabilidad, Nómina y Fiscal para Personas Morales y Físicas. Información financiera estructurada y al día.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 reveal delay-300">
+                    <a href="#servicios" class="px-8 py-4 bg-amal-cyan text-white font-semibold text-sm text-center hover:bg-amal-cyanDark transition-colors">
+                        Explorar Servicios
+                    </a>
+                    <a href="#contacto" class="px-8 py-4 border border-gray-600 text-white font-semibold text-sm text-center btn-outline">
+                        Agendar Consultoría
+                    </a>
+                </div>
+            </div>
+
+            <!-- Imagen Hero real -->
+            <div class="hidden md:flex justify-end reveal-right delay-200">
+                <div class="relative w-full max-w-md aspect-[4/5] bg-amal-dark border border-gray-800 p-2 shadow-2xl">
+                    <div class="overflow-hidden w-full h-full">
+                        <img id="hero-img"
+                             src="img/hero.jpg"
+                             alt="Corporativo Grupo Amal"
+                             class="w-full h-full object-cover transition-transform duration-700">
+                    </div>
+                    <!-- Elemento UI decorativo -->
+                    <div class="absolute -left-10 bottom-10 bg-black border border-gray-800 p-6 shadow-xl z-10">
+                        <div class="text-amal-cyan text-xs font-bold mb-2 tracking-widest">ESTADO ACTUAL</div>
+                        <div class="text-2xl font-light">Cumplimiento <span class="font-bold">100%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="py-24 bg-white text-amal-black">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+            <div class="mb-16 md:flex justify-between items-end border-b border-gray-200 pb-8 reveal">
+                <div class="max-w-2xl">
+                    <h2 class="text-sm font-bold text-amal-cyanDark tracking-widest uppercase mb-2">Áreas de Práctica</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold tracking-tight">Especialización a tu servicio.</h3>
+                </div>
+                <p class="text-gray-500 max-w-md mt-6 md:mt-0 text-sm leading-relaxed">
+                    Abordamos la complejidad técnica de la normativa actual para que tu empresa opere con seguridad y eficiencia financiera.
+                </p>
+            </div>
+
+            <!-- Grid de Servicios -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+
+                <!-- Servicio 1: Personas Morales -->
+                <div class="group cursor-pointer reveal">
+                    <div class="w-full aspect-[16/10] bg-gray-100 mb-6 overflow-hidden relative">
+                        <img src="img/personas_morales.png" alt="Personas Morales"
+                             class="w-full h-full object-cover transition-all duration-500 scale-100 group-hover:scale-105">
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 border-l-2 border-amal-cyan pl-3">Personas Morales</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Contabilidad General, estrategias contables, contabilidad electrónica y facturación electrónica realizadas por especialistas.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Información financiera al día</li>
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Reportes en tiempo y forma</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 2: Personas Físicas -->
+                <div class="group cursor-pointer reveal delay-100">
+                    <div class="w-full aspect-[16/10] bg-gray-100 mb-6 overflow-hidden relative">
+                        <img src="img/personas_fisicas.png" alt="Personas Físicas"
+                             class="w-full h-full object-cover transition-all duration-500 scale-100 group-hover:scale-105">
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 border-l-2 border-amal-cyan pl-3">Personas Físicas</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Actividad empresarial, RESICO y Servicios Profesionales. Contabilidad simplificada y facturación electrónica.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Reportes mensuales estratégicos</li>
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Estrategia adaptada a su giro</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 3: Nóminas -->
+                <div class="group cursor-pointer reveal delay-200">
+                    <div class="w-full aspect-[16/10] bg-gray-100 mb-6 overflow-hidden relative">
+                        <img src="img/servicios_nomina.webp" alt="Servicios de Nómina"
+                             class="w-full h-full object-cover transition-all duration-500 scale-100 group-hover:scale-105">
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 border-l-2 border-amal-cyan pl-3">Servicios de Nómina</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Cálculos conforme a la Legislación laboral, fiscal y de seguridad social para Personas Morales o Físicas en cualquier sector.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Semanal, Quincenal, Mensual y Asimilados</li>
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Control IMSS, INFONAVIT, FONACOT</li>
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Aguinaldos, PTU y Finiquitos</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 4: Fiscales -->
+                <div class="group cursor-pointer reveal">
+                    <div class="w-full aspect-[16/10] bg-gray-100 mb-6 overflow-hidden relative">
+                        <img src="img/servicios_fiscales.jpg" alt="Servicios Fiscales"
+                             class="w-full h-full object-cover transition-all duration-500 scale-100 group-hover:scale-105">
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 border-l-2 border-amal-cyan pl-3">Servicios Fiscales</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Especializados para cumplir con las obligaciones vigentes. Mantenemos positiva su opinión de cumplimiento.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Declaraciones Anuales y Provisionales</li>
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Estrategias fiscales por actividad</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 5: Contratistas y REPSE -->
+                <div class="group cursor-pointer reveal delay-100">
+                    <div class="w-full aspect-[16/10] bg-gray-100 mb-6 overflow-hidden relative">
+                        <img src="img/contratistas_repse.jpg" alt="Contratistas y Subcontratistas"
+                             class="w-full h-full object-cover transition-all duration-500 scale-100 group-hover:scale-105">
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 border-l-2 border-amal-cyan pl-3">Contratistas y REPSE</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Control de obligaciones con propietarios y autoridades. Preparación de información para dictamen o corrección patronal.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Registro REPSE y SIROC</li>
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Presentación ICSOE y SISUB</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 6: Cursos Excel -->
+                <div class="group cursor-pointer reveal delay-200">
+                    <div class="w-full aspect-[16/10] bg-gray-100 mb-6 overflow-hidden relative">
+                        <img src="img/cursos_herramientas_excel.webp" alt="Cursos Excel"
+                             class="w-full h-full object-cover transition-all duration-500 scale-100 group-hover:scale-105">
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 border-l-2 border-amal-cyan pl-3">Cursos y Herramientas Excel</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Impartimos cursos de Excel para empresas o grupos, desde básico hasta experto, enfocados en Contabilidad y Administración.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Capacitación In-Company</li>
+                        <li class="flex items-start gap-2"><i class="ph ph-check text-amal-cyan mt-1"></i> Papeles de trabajo automatizados</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Detalle de Servicios -->
+    <section class="py-24 bg-amal-black text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+            <div class="mb-20 reveal">
+                <span class="text-amal-cyan text-xs font-bold tracking-widest uppercase border-l-2 border-amal-cyan pl-3">Lo que hacemos</span>
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tight mt-6 max-w-4xl leading-tight">
+                    Todo lo que necesitas para operar con certeza fiscal y financiera.
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-800 border border-gray-800">
+
+                <!-- 01 Personas Morales -->
+                <div class="bg-amal-black p-8 lg:p-10 reveal group hover:bg-[#0d1a19] transition-colors duration-500">
+                    <div class="flex items-start justify-between mb-6">
+                        <span class="text-6xl font-bold text-gray-900 group-hover:text-amal-cyan transition-colors duration-500 leading-none select-none">01</span>
+                        <i class="ph ph-buildings text-2xl text-amal-cyan"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Personas Morales</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Contabilidad General, estrategias contables, contabilidad electrónica y facturación electrónica realizadas por especialistas. Nos encargamos de tener siempre la información financiera al día y cumplir con los reportes en tiempo y forma.
+                    </p>
+                    <ul class="space-y-2.5">
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Información financiera permanentemente actualizada</li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Contabilidad electrónica y facturación CFDI</li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Estrategias contables por especialistas certificados</li>
+                    </ul>
+                </div>
+
+                <!-- 02 Personas Físicas -->
+                <div class="bg-amal-black p-8 lg:p-10 reveal delay-100 group hover:bg-[#0d1a19] transition-colors duration-500">
+                    <div class="flex items-start justify-between mb-6">
+                        <span class="text-6xl font-bold text-gray-900 group-hover:text-amal-cyan transition-colors duration-500 leading-none select-none">02</span>
+                        <i class="ph ph-user-circle text-2xl text-amal-cyan"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Personas Físicas</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Atendemos tres regímenes fiscales con estrategia personalizada según su giro:</p>
+                    <ul class="space-y-2.5">
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span><span><strong class="text-gray-300">Actividad Empresarial:</strong> contabilidad, facturación electrónica e información financiera con reportes mensuales estratégicos</span></li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span><span><strong class="text-gray-300">RESICO:</strong> contabilidad simplificada con la mejor estrategia fiscal disponible</span></li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span><span><strong class="text-gray-300">Servicios Profesionales:</strong> control de información y optimización de carga fiscal</span></li>
+                    </ul>
+                </div>
+
+                <!-- 03 Nóminas -->
+                <div class="bg-amal-black p-8 lg:p-10 reveal group hover:bg-[#0d1a19] transition-colors duration-500">
+                    <div class="flex items-start justify-between mb-6">
+                        <span class="text-6xl font-bold text-gray-900 group-hover:text-amal-cyan transition-colors duration-500 leading-none select-none">03</span>
+                        <i class="ph ph-users-three text-2xl text-amal-cyan"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Servicios de Nómina</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Cálculos conforme a la legislación laboral, fiscal y de seguridad social para Personas Morales y Físicas en cualquier sector. Calculamos el Impuesto Sobre Nóminas, cuotas obrero-patronales, créditos INFONAVIT y FONACOT, y reportamos incapacidades y riesgos de trabajo ante las autoridades competentes.
+                    </p>
+                    <div class="grid grid-cols-2 gap-x-6 gap-y-2">
+                        <span class="text-xs text-gray-500 flex items-center gap-2"><span class="text-amal-cyan">—</span>Nómina Semanal / Catorcenal</span>
+                        <span class="text-xs text-gray-500 flex items-center gap-2"><span class="text-amal-cyan">—</span>Nómina Quincenal / Mensual</span>
+                        <span class="text-xs text-gray-500 flex items-center gap-2"><span class="text-amal-cyan">—</span>Asimilados a Salario</span>
+                        <span class="text-xs text-gray-500 flex items-center gap-2"><span class="text-amal-cyan">—</span>Nómina Espejo</span>
+                        <span class="text-xs text-gray-500 flex items-center gap-2 col-span-2"><span class="text-amal-cyan">—</span>Aguinaldo, PTU, Finiquitos e Indemnizaciones</span>
+                    </div>
+                </div>
+
+                <!-- 04 Fiscales -->
+                <div class="bg-amal-black p-8 lg:p-10 reveal delay-100 group hover:bg-[#0d1a19] transition-colors duration-500">
+                    <div class="flex items-start justify-between mb-6">
+                        <span class="text-6xl font-bold text-gray-900 group-hover:text-amal-cyan transition-colors duration-500 leading-none select-none">04</span>
+                        <i class="ph ph-scales text-2xl text-amal-cyan"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Servicios Fiscales</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Servicios profesionales especializados para cumplir con las obligaciones fiscales vigentes de Personas Morales y Físicas. Mantenemos positiva su opinión de cumplimiento mediante la presentación en tiempo y forma de todas sus obligaciones.
+                    </p>
+                    <ul class="space-y-2.5">
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Declaraciones Anuales y Pagos Provisionales o Definitivos</li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Facturación Electrónica CFDI</li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Estrategias fiscales adecuadas según el giro de su actividad</li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Opinión de cumplimiento positiva garantizada</li>
+                    </ul>
+                </div>
+
+                <!-- 05 Contratistas y REPSE -->
+                <div class="bg-amal-black p-8 lg:p-10 reveal group hover:bg-[#0d1a19] transition-colors duration-500">
+                    <div class="flex items-start justify-between mb-6">
+                        <span class="text-6xl font-bold text-gray-900 group-hover:text-amal-cyan transition-colors duration-500 leading-none select-none">05</span>
+                        <i class="ph ph-hard-hat text-2xl text-amal-cyan"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Contratistas y REPSE</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Controlamos las obligaciones que deben cumplir contratistas y subcontratistas con los propietarios y con las autoridades, preparamos la información para dictamen o corrección patronal y diseñamos la mejor estrategia para cumplir en tiempo y forma según sus contratos.
+                    </p>
+                    <ul class="space-y-2.5">
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Registro REPSE y SIROC</li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Presentación cuatrimestral ICSOE y SISUB</li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Entero de Cuotas Obrero Patronales por Contrato</li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Dictamen y corrección patronal</li>
+                    </ul>
+                </div>
+
+                <!-- 06 Cursos Excel -->
+                <div class="bg-amal-black p-8 lg:p-10 reveal delay-100 group hover:bg-[#0d1a19] transition-colors duration-500">
+                    <div class="flex items-start justify-between mb-6">
+                        <span class="text-6xl font-bold text-gray-900 group-hover:text-amal-cyan transition-colors duration-500 leading-none select-none">06</span>
+                        <i class="ph ph-chart-bar text-2xl text-amal-cyan"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Cursos y Herramientas Excel</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Impartimos cursos de Excel para empresas o grupos de empleados, desde nivel básico hasta experto, con enfoque especial en Contabilidad y Administración. También preparamos papeles de trabajo automatizados y de fácil uso a requerimiento.
+                    </p>
+                    <ul class="space-y-2.5">
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Básico, Medio, Avanzado y Experto</li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Excel para Contabilidad y Administración</li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Capacitación In-Company para grupos de empleados</li>
+                        <li class="flex items-start gap-3 text-xs text-gray-500"><span class="text-amal-cyan font-bold shrink-0 mt-0.5">—</span>Papeles de trabajo automatizados a medida</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- CTA dentro de la sección -->
+            <div class="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-gray-800 pt-12 reveal">
+                <p class="text-gray-400 text-sm max-w-lg">¿Tienes dudas sobre qué servicio se adapta mejor a tu situación? Contáctanos y un especialista te asesora sin costo.</p>
+                <a href="#contacto" class="shrink-0 px-8 py-4 bg-amal-cyan text-white font-semibold text-sm hover:bg-amal-cyanDark transition-colors">
+                    Solicitar Asesoría Gratuita
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección de Experiencia -->
+    <section id="experiencia" class="py-20 bg-gray-50 border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+
+                <div class="md:col-span-5 reveal-left">
+                    <h2 class="text-3xl font-bold mb-6 tracking-tight">Metodología rigurosa para resultados precisos.</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-sm">
+                        En Grupo Amal procesamos y analizamos tu situación integral para crear estrategias que protejan tu patrimonio y optimicen tu carga fiscal dentro del marco legal. Soluciones corporativas adaptadas a las exigencias de tu sector.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-8 border-t border-gray-200 pt-8">
+                        <div>
+                            <div class="text-3xl font-bold text-black mb-1">100%</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-widest">Cumplimiento</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-black mb-1">24/7</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-widest">Disponibilidad</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 bg-white p-8 border border-gray-200 shadow-sm reveal-right">
+                    <h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+                        <i class="ph ph-briefcase text-amal-cyan"></i> Compromiso Empresarial
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100">
+                                <i class="ph ph-shield-check text-lg text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1">Seguridad Jurídica y Fiscal</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">Tus operaciones respaldadas por normativa vigente, evitando riesgos innecesarios ante las autoridades fiscales.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100">
+                                <i class="ph ph-chart-line-up text-lg text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1">Optimización Estratégica</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">No solo calculamos impuestos, planeamos escenarios para mejorar la rentabilidad de tu negocio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto y Ubicación -->
+    <section id="contacto" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+            <div class="mb-16 md:flex justify-between items-end pb-8 reveal">
+                <div class="max-w-2xl">
+                    <h2 class="text-sm font-bold text-amal-cyanDark tracking-widest uppercase mb-2">Contacto</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold tracking-tight">Iniciemos una conversación.</h3>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+                <!-- Formulario Minimalista -->
+                <div class="reveal-left">
+                    <form onsubmit="event.preventDefault(); showSuccessMessage();" class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="relative">
+                                <input type="text" id="nombre" required class="block w-full px-0 py-3 text-sm text-black bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-amal-cyan peer" placeholder=" ">
+                                <label for="nombre" class="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-amal-cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre de la Empresa / Persona</label>
+                            </div>
+                            <div class="relative">
+                                <input type="tel" id="telefono" required class="block w-full px-0 py-3 text-sm text-black bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-amal-cyan peer" placeholder=" ">
+                                <label for="telefono" class="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-amal-cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Teléfono / WhatsApp</label>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <input type="email" id="email" required class="block w-full px-0 py-3 text-sm text-black bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-amal-cyan peer" placeholder=" ">
+                            <label for="email" class="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-amal-cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Correo electrónico</label>
+                        </div>
+                        <div class="relative">
+                            <select id="servicio" class="block w-full px-0 py-3 text-sm text-black bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-amal-cyan peer">
+                                <option value="" disabled selected></option>
+                                <option>Contabilidad Personas Morales</option>
+                                <option>Contabilidad Personas Físicas</option>
+                                <option>Nóminas (Cualquier periodicidad)</option>
+                                <option>Servicios Fiscales</option>
+                                <option>Registro REPSE / Contratistas</option>
+                                <option>Cursos de Excel Corporativo</option>
+                            </select>
+                            <label for="servicio" class="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-amal-cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Servicio de interés</label>
+                        </div>
+                        <div class="relative">
+                            <textarea id="mensaje" rows="3" class="block w-full px-0 py-3 text-sm text-black bg-transparent border-0 border-b border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-amal-cyan peer resize-none" placeholder=" "></textarea>
+                            <label for="mensaje" class="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-amal-cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Detalles adicionales</label>
+                        </div>
+
+                        <button type="submit" class="w-full md:w-auto px-10 py-4 bg-amal-black text-white text-sm font-bold hover:bg-amal-cyan transition-colors">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+
+                    <!-- Mensaje de Éxito -->
+                    <div id="success-msg" class="hidden mt-6 p-4 bg-gray-50 border-l-4 border-amal-cyan text-sm text-black">
+                        <i class="ph ph-check-circle text-amal-cyan mr-2"></i> Hemos recibido su información. Un asesor de Grupo Amal se pondrá en contacto a la brevedad.
+                    </div>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="reveal-right flex flex-col justify-between">
+                    <div class="mb-8">
+                        <h4 class="text-lg font-bold mb-6 border-b border-gray-200 pb-4">Información Directa</h4>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <i class="ph ph-whatsapp-logo text-2xl text-amal-cyanDark"></i>
+                                <div>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">WhatsApp / Teléfono</p>
+                                    <a href="https://wa.me/525657618023" target="_blank" class="text-lg font-medium hover:text-amal-cyan transition-colors">+52 56 5761 8023</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Disponibilidad -->
+                    <div class="border-t border-gray-200 pt-8">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-4">Disponibilidad</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-amal-cyan shrink-0"></span>
+                                <span class="text-sm text-gray-700">Atención personalizada <strong>Lunes a Viernes</strong></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-amal-cyan shrink-0"></span>
+                                <span class="text-sm text-gray-700">WhatsApp disponible <strong>24 / 7</strong></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-amal-cyan shrink-0"></span>
+                                <span class="text-sm text-gray-700">Respuesta en menos de <strong>24 horas</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Corporativo -->
+    <footer class="bg-amal-black py-12 text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-xl tracking-tight">GRUPO <span class="text-amal-cyan">AMAL</span></span>
+            </div>
+            <p class="text-gray-500 text-sm text-center md:text-left">
+                &copy; 2026 Grupo Amal. Todos los derechos reservados. Servicios Contables, Fiscales y Nóminas.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp — esquina inferior izquierda -->
+    <a href="https://wa.me/525657618023?text=Hola,%20busco%20información%20sobre%20servicios%20contables%20para%20mi%20empresa."
+       target="_blank"
+       class="fixed bottom-6 left-6 z-50 w-14 h-14 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 wp-pulse">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-7 h-7">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- JS -->
+    <script src="main.js" defer></script>
+</body>
+</html>
